@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header class="genre-card-header">
+    <mat-card-title
+      ><h1>{{ movie.Genre.Name }}</h1></mat-card-title
+    >
+  </mat-card-header>
+  <mat-card-content class="genre-card-content">
+    <p>{{ movie.Genre.Description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="closeDialog()">
+      Close
+    </button>
+  </mat-card-actions>
+</mat-card>

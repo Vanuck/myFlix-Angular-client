@@ -1,0 +1,77 @@
+.main-page {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url("./../../img/topsters2.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+  }
+  .main-page {
+    margin: 0px;
+    padding: 24px;
+    align-self: center;
+    text-align: center;
+  }
+  h1 {
+    font-size: 90px;
+    color: yellow;
+    text-align: center;
+    top: 60px;
+    position: absolute;
+    margin-top: 80px;
+    margin: 0;
+  }
+  p {
+    font-size: 50px;
+    color: yellow;
+    text-align: center;
+    top: 170px;
+    position: absolute;
+    margin: 0px 0 40px;
+  }
+  button {
+    width: 180px;
+    height: 48px;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  /* Media query for screens smaller than 500px */
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    button {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Media query for screens larger than 500px */
+  @media only screen and (min-width: 500px) and (max-width: 768px) {
+    h1 {
+      font-size: 60px;
+    }
+  
+    p {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    button {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  }
