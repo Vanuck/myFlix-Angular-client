@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "docs": "typedoc",
     "serve:ssr:myFlix-Angular-client": "node dist/my-flix-angular-client/server/server.mjs"
   },
   "private": true,
@@ -42,6 +43,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^4.0.3",
     "typescript": "~5.4.2"
   }
 }
