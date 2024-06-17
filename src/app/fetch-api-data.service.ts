@@ -351,13 +351,9 @@ export class AddFavoriteMovieService extends ErrorAndResponseService {
     });
 
     return this.http
-      .post(
-        apiUrl + '/users/' + Username || localUser + '/movies/' + id,
-        null,
-        {
-          headers,
-        }
-      )
+      .post(`${apiUrl}/users/${Username || localUser}/movies/${id}`, null, {
+        headers,
+      })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
   }
 }
@@ -423,13 +419,13 @@ export class DeleteUserService extends ErrorAndResponseService {
    */
   public deleteUser(): Observable<any> {
     const token = localStorage.getItem('token');
-    const { _id } = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    const { Username } = JSON.parse(localStorage.getItem('currentUser') || '{}');
 
     const headers = new HttpHeaders({
       Authorization: 'Bearer ' + token,
     });
     return this.http
-      .delete(apiUrl + '/users/' + _id, {
+      .delete(apiUrl + '/users/' + Username, {
         headers,
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));
@@ -471,7 +467,7 @@ export class RemoveFavoriteMovieService extends ErrorAndResponseService {
       Authorization: 'Bearer ' + token,
     });
     return this.http
-      .delete(apiUrl + '/users/' + Username || localUser + '/movies/' + id, {
+      .delete(`${apiUrl}/users/${Username || localUser}/movies/${id}`, {
         headers,
       })
       .pipe(map(this.extractResponseData), catchError(this.handleError));

@@ -16,7 +16,7 @@ import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation
   styleUrl: './delete-user.component.scss',
 })
 export class DeleteUserComponent {
-  _id = '';
+  Username = '';
   /**
    * Creates an instance of DeleteUserComponent.
    * @param delUser - Service for deleting user data.
